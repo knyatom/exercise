@@ -27,7 +27,17 @@
             minus = () => this.setState(
                current=>(  { count: this.state.count - 1  } )
             )
+            componentDidMount(){
+                console.log('component rendered');
+            }
+            componentDidUpdate(){
+                console.log("I'im just updated");
+            }
+            componentWillUnmount(){
+                console.log("Good Bye");
+            }
             render() {
+                console.log('I m rendder 중');
                 return (
                     <div>
                         <h1> The Numner is : {this.state.count}</h1>
